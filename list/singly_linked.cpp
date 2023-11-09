@@ -19,7 +19,7 @@ void SinglyLinked<ListType>::check_out_of_range(const unsigned int index) {
 }
 
 template <typename ListType>
-SinglyLinked<ListType>::Node<ListType> *
+SinglyLinked<ListType>::Node<ListType>*
 SinglyLinked<ListType>::get_previous(const unsigned int index) {
     check_out_of_range(index);
 
