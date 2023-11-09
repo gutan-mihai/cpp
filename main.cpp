@@ -4,6 +4,9 @@
 
 using namespace std;
 
+// compile code:
+// clang++ -std=c++20 -stdlib=libc++ -g main.cpp
+
 int main() {
     cout << "----- SinglyLinked -----" << endl;
     SinglyLinked<int> slst;

@@ -21,8 +21,7 @@ class SinglyLinked {
 
   private:
     template <typename>
-    class Node {
-      public:
+    struct Node {
         Node(ListType value, Node<ListType> *next = nullptr) {
             this->value = value;
             this->next = next;
@@ -34,7 +33,7 @@ class SinglyLinked {
 
     unsigned int length() { return _size - 1; }
     void check_out_of_range(const unsigned int index);
-    Node<ListType>* get_previous(const unsigned int index);
+    Node<ListType> *get_previous(const unsigned int index);
 
     Node<ListType> *_head;
     unsigned int _size;

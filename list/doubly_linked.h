@@ -21,8 +21,7 @@ class DoublyLinked {
 
   private:
     template <typename>
-    class Node {
-      public:
+    struct Node {
         Node(ListType value, Node<ListType> *prev = nullptr, Node<ListType> *next = nullptr) {
             this->value = value;
             this->prev = prev;
@@ -36,9 +35,10 @@ class DoublyLinked {
 
     unsigned int length() { return _size - 1; }
     void check_out_of_range(const unsigned int index);
-    Node<ListType>* get_next(const unsigned int index);
-    Node<ListType>* get_previous(const unsigned int index);
+    Node<ListType> *get_next(const unsigned int index);
+    Node<ListType> *get_previous(const unsigned int index);
 
     Node<ListType> *_head;
+    Node<ListType> *_tail;
     unsigned int _size;
 };
