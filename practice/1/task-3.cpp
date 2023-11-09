@@ -15,7 +15,7 @@ void month_input() {
     seasons["Autumn"] = vector<int>{9, 10, 11};
     
     // for (auto it = seasons.begin(); it != seasons.end(); ++it) {
-    //     for (int i = 0; i < it->second.size(); i++) {
+    //     for (int i = 0; i < it->second.size(); ++i) {
     //         if (it->second[i] == month_number) {
     //             cout << it->first << endl;
     //             return;
@@ -24,7 +24,7 @@ void month_input() {
     // }
 
     for (const auto& [season, months] : seasons) {
-        for (int i = 0; i < months.size(); i++) {
+        for (int i = 0; i < months.size(); ++i) {
             if (months[i] == month_number) {
                 cout << season << endl;
                 return;

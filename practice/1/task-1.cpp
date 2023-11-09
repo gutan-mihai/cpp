@@ -31,7 +31,7 @@ bool isIcecreamSandwich(const string& sandwich) {
 
 int main() {
     string sandwich;
-    cout << "Please enter \"Sandwich with ice cream\": ";
+    cout << "Please enter letters: ";
     cin >> sandwich;
     cout << (isIcecreamSandwich(sandwich) ? "Is sandwich with ice cream" : "Not sandwich with ice cream") << endl;
 
