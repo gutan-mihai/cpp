@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool isIcecreamSandwich(const string& sandwich) {
+bool isIcecreamSandwich(const string &sandwich) {
     if (sandwich.size() < 3) {
         return false;
     }
@@ -13,7 +13,7 @@ bool isIcecreamSandwich(const string& sandwich) {
     for (int i = 0; i < sandwich.size(); ++i) {
         letters[sandwich[i]] = 1;
     }
-    
+
     if (letters.size() == 1) {
         return false;
     }
@@ -25,7 +25,7 @@ bool isIcecreamSandwich(const string& sandwich) {
             return false;
         }
     }
-    
+
     return true;
 }
 
@@ -33,7 +33,9 @@ int main() {
     string sandwich;
     cout << "Please enter letters: ";
     cin >> sandwich;
-    cout << (isIcecreamSandwich(sandwich) ? "Is sandwich with ice cream" : "Not sandwich with ice cream") << endl;
+    cout << (isIcecreamSandwich(sandwich) ? "Is sandwich with ice cream"
+                                          : "Not sandwich with ice cream")
+         << endl;
 
     return 0;
 }

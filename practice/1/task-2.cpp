@@ -23,13 +23,12 @@ int main() {
     }
 
     cout << endl << "Your numbers are: ";
-    for (int i = 0; i < numbers.size(); i++)
-    {
+    for (int i = 0; i < numbers.size(); i++) {
         cout << numbers[i] << " ";
     }
-    
+
     auto it = min_element(numbers.begin(), numbers.end());
     cout << endl << "Min number is: " << *it << endl;
-    
-    return 0 ;
+
+    return 0;
 }

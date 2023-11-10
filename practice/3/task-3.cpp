@@ -31,8 +31,10 @@ int main() {
     abc_morse["−−−·"] = "xX";
     abc_morse["−−−−"] = "yY";
     abc_morse["−−·−"] = "zZ";
-    
-    cout << "Enter your text: "; string text; cin >> text;
+
+    cout << "Enter your text: ";
+    string text;
+    cin >> text;
     cout << "Morse: ";
     for (size_t i = 0; i < text.size(); ++i) {
         for (auto it = abc_morse.begin(); it != abc_morse.end(); ++it) {

@@ -1,21 +1,23 @@
-#include <iostream>
-#include <vector>
-#include <numeric> // для функции accumulate()
 #include <algorithm> // для функции min_element() и max_element()
+#include <iostream>
+#include <numeric> // для функции accumulate()
+#include <vector>
 
 using namespace std;
 
 int main() {
-    cout << "Enter the number of numbers of the sequence: "; int number; cin >> number;
+    cout << "Enter the number of numbers of the sequence: ";
+    int number;
+    cin >> number;
 
     vector<float> sequence;
     cout << "Введите последовательность: ";
-    while (sequence.size() < number)
-    {
-        float num; cin >> num;
+    while (sequence.size() < number) {
+        float num;
+        cin >> num;
         sequence.push_back(num);
     }
-    
+
     float average = accumulate(sequence.begin(), sequence.end(), 0.0) / number;
     cout << "The average: " << average << endl;
 

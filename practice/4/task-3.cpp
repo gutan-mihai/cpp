@@ -1,20 +1,22 @@
 #include <iostream>
 #include <set>
-#include <string> // для цункции getline()
 #include <sstream> // для цункции stringstream()
+#include <string>  // для цункции getline()
 
 using namespace std;
 
-void fill_list(set<int>& list) {
+void fill_list(set<int> &list) {
     string str;
     getline(cin, str);
     stringstream ss(str);
     while (!ss.eof()) {
-        int x; ss >> x; list.emplace(x);
+        int x;
+        ss >> x;
+        list.emplace(x);
     }
 }
 
-void set_append(set<int>& result, const set<int>& append) {
+void set_append(set<int> &result, const set<int> &append) {
     for (auto it = append.begin(); it != append.end(); ++it) {
         result.emplace(*it);
     }

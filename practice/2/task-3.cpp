@@ -1,12 +1,13 @@
-#include <iostream>
-#include <ctime> // для функции time()
 #include <cstdlib> // для функций rand() и srand()
+#include <ctime>   // для функции time()
+#include <iostream>
 
 using namespace std;
 
-void guess_number(const string& guessing_number) {
+void guess_number(const string &guessing_number) {
     cout << "Your option: ";
-    string option; cin >> option;
+    string option;
+    cin >> option;
 
     if (option == guessing_number) {
         cout << "*** You guessed the number: " << guessing_number << "!. ***" << endl;
@@ -31,7 +32,7 @@ void guess_number(const string& guessing_number) {
         }
     }
 
-    cout << "Guessed: " << guessed <<". In their places: " << in_their_places << endl;
+    cout << "Guessed: " << guessed << ". In their places: " << in_their_places << endl;
     guess_number(guessing_number);
 }
 
