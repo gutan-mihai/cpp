@@ -51,5 +51,8 @@ compile_commands.json
 CTestTestfile.cmake
 _deps
 
+#Build
+build
+
 #Executable
-output
+learning_out
