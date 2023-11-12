@@ -7,3 +7,13 @@
 #include "6/task-1.cpp"
 #include "6/task-2.cpp"
 #include "6/task-3.cpp"
+
+// Часть #7
+#include "7/task-1.cpp"
+#include "7/task-2.cpp"
+#include "7/task-3.cpp"
+
+// Часть #8
+#include "8/task-1.cpp"
+#include "8/task-2.cpp"
+#include "8/task-3.cpp"

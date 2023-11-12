@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    PlaySoundTimer task;
+    StudentGradesAccounting task;
     task.run();
 
     return 0;
