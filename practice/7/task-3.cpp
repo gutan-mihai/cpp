@@ -1,9 +1,9 @@
 #pragma once
 
+#include <algorithm> // для функции sort()
+#include <fstream>   // для функции ifstream()
 #include <iostream>
 #include <vector>
-#include <algorithm> // для функции sort()
-#include <fstream> // для функции ifstream()
 
 using namespace std;
 
@@ -44,13 +44,13 @@ private:
         student.math_note = math_note;
         student.phys_note = phys_note;
         student.info_note = info_note;
-        student.average_note = (math_note + phys_note + info_note) / 3;
+        student.average_note = float(math_note + phys_note + info_note) / 3;
 
         students.push_back(student);
     }
 
     void show_students() {
-        cout << "Name\tMath\tPhys\tInfo\t" << endl;
+        cout << "Name\tMath\tPhys\tInfo" << endl;
         sort(                 //
             students.begin(), //
             students.end(),   //
