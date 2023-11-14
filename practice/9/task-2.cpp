@@ -5,6 +5,7 @@
 #include <sstream> // для цункции stringstream()
 #include <string>  // для цункции getline()
 #include <vector>
+#include "helpers.h"
 
 using namespace std;
 
@@ -16,8 +17,7 @@ class IsNumberInList {
 public:
     void run() {
         cout << "Enter the elements for the array (separated by space): ";
-        vector<int> numbers;
-        fill_vector(numbers);
+        auto numbers = helpers::fill_list<vector<int>, int>();
 
         cout << "Enter the number you are looking in the array: ";
         int find_it;
@@ -28,18 +28,6 @@ public:
             cout << "The number exists in array! \n";
         } else {
             cout << "The number doest not exists in array! \n";
-        }
-    }
-
-private:
-    void fill_vector(vector<int> &list) {
-        string str;
-        getline(cin, str);
-        stringstream ss(str);
-        while (!ss.eof()) {
-            int x;
-            ss >> x;
-            list.push_back(x);
         }
     }
 };

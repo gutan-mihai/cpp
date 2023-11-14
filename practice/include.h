@@ -1,3 +1,6 @@
+// LeetCode
+#include "leetcode/p-1480.cpp"
+
 // Глава #2 -> Задание #4
 #include "chapter-2/task-4.cpp"
 
