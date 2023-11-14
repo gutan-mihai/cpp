@@ -1,0 +1,25 @@
+#pragma once
+
+#include <iostream>
+
+using namespace std;
+
+class NumberIsPalindrome {
+public:
+    void run() {
+        cout << "Enter a number: ";
+        string number;
+        cin >> number;
+
+        string inversed_string;
+        for (auto rit = number.rbegin(); rit != number.rend(); ++rit) {
+            inversed_string.push_back(*rit);
+        }
+
+        if (inversed_string == number) {
+            cout << inversed_string << " is a palindrome \n";
+        } else {
+            cout << inversed_string << " is not a palindrome \n";
+        }
+    }
+};

@@ -4,8 +4,8 @@
 using namespace std;
 
 int main() {
-    StudentGradesAccounting task;
+    class IsNumberInList task;
     task.run();
 
     return 0;
-}
+};
