@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    class IsNumberInList task;
+    class HappySixDigitNumber task;
     task.run();
 
     return 0;

@@ -25,3 +25,8 @@
 #include "9/task-1.cpp"
 #include "9/task-2.cpp"
 #include "9/task-3.cpp"
+
+// Часть #10
+#include "10/task-1.cpp"
+#include "10/task-2.cpp"
+#include "10/task-3.cpp"

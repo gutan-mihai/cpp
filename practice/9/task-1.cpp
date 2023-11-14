@@ -4,6 +4,8 @@
 
 using namespace std;
 
+// Напишите программу, которая проверяет, является ли год високосным.
+
 class LearYear {
 public:
     void run() {
