@@ -3,7 +3,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include "helpers.h"
+#include "utils.h"
 
 using namespace std;
 
@@ -14,7 +14,7 @@ class RunningSumOf1DArray {
 public:
     void run() {
         cout << "Enter the elements for the list (separated by space): ";
-        auto nums = helpers::fill_list<vector<int>, int>();
+        auto nums = utils::fill_list<vector<int>, int>();
         vector<int> running_sum;
         for (auto nums_it = nums.begin(); nums_it != nums.end(); ++nums_it) {
             int sum = *nums_it;

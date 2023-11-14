@@ -5,7 +5,7 @@
 #include <sstream> // для цункции stringstream()
 #include <string>  // для цункции getline()
 #include <vector>
-#include "helpers.h"
+#include "utils.h"
 
 using namespace std;
 
@@ -17,7 +17,7 @@ class IsNumberInList {
 public:
     void run() {
         cout << "Enter the elements for the array (separated by space): ";
-        auto numbers = helpers::fill_list<vector<int>, int>();
+        auto numbers = utils::fill_list<vector<int>, int>();
 
         cout << "Enter the number you are looking in the array: ";
         int find_it;
