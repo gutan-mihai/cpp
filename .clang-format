@@ -2,3 +2,5 @@ BasedOnStyle: LLVM
 IndentWidth: 4
 AlwaysBreakTemplateDeclarations: true
 AccessModifierOffset: -4
+CompactNamespaces: false
+NamespaceIndentation: All
