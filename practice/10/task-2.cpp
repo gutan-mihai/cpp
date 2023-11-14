@@ -11,17 +11,26 @@ class HappySixDigitNumber {
 public:
     void run() {
         cout << "Enter a 6-digit number: ";
-        string number = get_number();
+        string digit = get_digit();
+        if (is_happy_digit(digit)) {
+            cout << "Is happy digit! \n";
+        } else {
+            cout << "Does not happy digit! \n";
+        }
     }
 
 private:
-    string get_number() {
-        string number;
-        getline(cin, number);
-        if (number.size() != 6) {
-            return get_number();
+    string get_digit() {
+        string digit;
+        getline(cin, digit);
+        if (digit.size() != 6) {
+            return get_digit();
         }
 
-        return number;
+        return digit;
+    }
+
+    bool is_happy_digit(const string &digit) {
+        return true;
     }
 };
