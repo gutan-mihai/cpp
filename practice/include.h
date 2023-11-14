@@ -1,3 +1,6 @@
+// Глава #2 -> Задание #4
+#include "chapter-2/task-4.cpp"
+
 // Часть #5
 #include "5/task-1.cpp"
 #include "5/task-2.cpp"
