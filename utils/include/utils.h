@@ -6,6 +6,8 @@
 using namespace std;
 
 namespace utils {
+    int rand_int(int min, int max);
+
     template <typename VectorType>
     VectorType stov(const string &str) {
         VectorType v_numbers;

@@ -4,6 +4,7 @@
 #include <iostream>
 #include <numeric> // для функции accumulate()
 #include <vector>
+#include "utils.h"
 
 using namespace std;
 
@@ -39,7 +40,7 @@ public:
         int s_sum = accumulate(s_vector.begin(), s_vector.end(), 0);
         cout << "Your vector sum is: " << s_sum << "\n";
 
-        int r_index = random(0, available_set.size() - 1);
+        int r_index = utils::rand_int(0, available_set.size() - 1);
         vector<int> r_vector = available_set.at(r_index);
         int r_sum = accumulate(r_vector.begin(), r_vector.end(), 0);
         cout << "Comp vector sum is: " << r_sum << "\n";
@@ -55,11 +56,6 @@ public:
 
 private:
     vector<vector<int>> available_set;
-
-    int random(int min, int max) {
-        srand(time(0));
-        return min + rand() % ((max + 1) - min);
-    }
 
     void print_vector(const vector<int> &list, int index) {
         cout << "[" << index << "]: ";

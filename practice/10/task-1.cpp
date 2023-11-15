@@ -3,7 +3,7 @@
 #include <iostream>
 #include <numeric> // для функции accumulate()
 #include <vector>
-#include "vectors.h"
+#include "utils.h"
 
 using namespace std;
 

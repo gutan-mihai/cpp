@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    class RequiredMoneyToLiveAYear task;
+    class OpenSafeDeposit task;
     task.run();
 
     return 0;

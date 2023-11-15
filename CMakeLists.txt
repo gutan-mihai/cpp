@@ -13,13 +13,13 @@ set(CMAKE_CXX_STANDARD 20)
 set(SOURCE_OUTPUT main.cpp)
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -v") # -v flag for verbose
 
-# Add Vectors library
-add_library(vectors_lib STATIC ${PROJECT_SOURCE_DIR}/utils/vectors.cpp)
-target_include_directories(vectors_lib PUBLIC ${PROJECT_SOURCE_DIR}/utils/include)
+# Add Utils library
+add_library(utils_lib STATIC ${PROJECT_SOURCE_DIR}/utils/utils.cpp)
+target_include_directories(utils_lib PUBLIC ${PROJECT_SOURCE_DIR}/utils/include)
 
 # Main project
 add_executable(main ${SOURCE_OUTPUT})
 target_include_directories(main PRIVATE ${PROJECT_SOURCE_DIR}/utils/include)
 
-# Link the Vectors library to the main project
-target_link_libraries(main vectors_lib)
+# Link the Utils library to the main project
+target_link_libraries(main utils_lib)

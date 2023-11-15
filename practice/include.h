@@ -38,3 +38,8 @@
 #include "11/task-1.cpp"
 #include "11/task-2.cpp"
 #include "11/task-3.cpp"
+
+// Часть #12
+#include "12/task-1.cpp"
+#include "12/task-2.cpp"
+#include "12/task-3.cpp"

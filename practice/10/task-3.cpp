@@ -1,6 +1,6 @@
 #pragma once
 
-#include "vectors.h"
+#include "utils.h"
 #include <iostream>
 #include <numeric> // для функции accumulate()
 #include <set>
