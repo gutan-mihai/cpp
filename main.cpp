@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    class OpenSafeDeposit task;
+    class PeopleConversation task;
     task.run();
 
     return 0;

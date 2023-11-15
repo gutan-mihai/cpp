@@ -1,6 +1,8 @@
 #pragma once
 
+#include "utils.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -33,3 +35,67 @@ using namespace std;
 // информацию обо всех людях. Затем все люди должны поздороваться друг с другом
 // в следующем порядке: первый здоровается со вторым, затем второй с первым, а
 // затем первый с третьим, третий с первым и т.д.
+
+enum people_type {
+    formalist, //
+    informal,  //
+    realist,   //
+    none,      //
+};
+
+struct Person {
+    string name;
+    int age;
+    people_type type;
+
+    Person(string name, int age, people_type type) {
+        this->name = name;
+        this->age = age;
+        this->type = type;
+    }
+
+    void who_is() {
+        cout << "My name is " << name << ", I am " << age << " old and " << type;
+        cout << "\n";
+    }
+
+    void say_hello(const Person &other) {
+        cout << name << ": ";
+        cout << "Hello, " << other.name << "!";
+        cout << "\n";
+    }
+};
+
+class PeopleConversation {
+public:
+    void run() {
+        vector<Person> peoples;
+        for (int i = 0; i < 5; i++) {
+            peoples.push_back(create_person());
+        }
+
+        cout << "Peoples: \n";
+        for (auto it = peoples.begin(); it != peoples.end(); ++it) {
+            Person person = *it;
+            person.who_is();
+        }
+    }
+
+private:
+    Person create_person() {
+        vector<string> names{
+            "Alexander", "Andrei", "Ana",   "Irina",   "Natalia",
+            "Pavel",     "Roman",  "Sveta", "Serghei", "Tanea",
+        };
+
+        int age = utils::rand_int(20, 40);
+        int index = utils::rand_int(0, names.size() - 1);
+        cout << "index: " << index << " age: " << age << "\n";
+
+        return Person(                              //
+            names[index],                           //
+            age,                                    //
+            static_cast<people_type>(rand() % none) //
+        );
+    }
+};
