@@ -2,8 +2,6 @@
 
 #include <algorithm> // для цункции find()
 #include <iostream>
-#include <sstream> // для цункции stringstream()
-#include <string>  // для цункции getline()
 #include <vector>
 #include "vectors.h"
 

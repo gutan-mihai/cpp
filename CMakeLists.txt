@@ -11,10 +11,10 @@ get_directory_property(IS_SUBPROJECT PARENT_DIRECTORY)
 
 set(CMAKE_CXX_STANDARD 20)
 set(SOURCE_OUTPUT main.cpp)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -v")
+# set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -v") # -v flag for verbose
 
 # Add Vectors library
-add_library(vectors_lib STATIC ${PROJECT_SOURCE_DIR}/utils/src/vectors.cpp)
+add_library(vectors_lib STATIC ${PROJECT_SOURCE_DIR}/utils/vectors.cpp)
 target_include_directories(vectors_lib PUBLIC ${PROJECT_SOURCE_DIR}/utils/include)
 
 # Main project

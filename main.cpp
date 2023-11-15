@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    class RunningSumOf1DArray task;
+    class RequiredMoneyToLiveAYear task;
     task.run();
 
     return 0;

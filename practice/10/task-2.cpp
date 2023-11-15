@@ -1,6 +1,9 @@
 #pragma once
 
 #include <iostream>
+#include <numeric>
+#include <string>
+#include "vectors.h"
 
 using namespace std;
 
@@ -13,7 +16,7 @@ public:
         cout << "Enter a 6-digit number: ";
         string digit = get_digit();
         if (is_happy_digit(digit)) {
-            cout << "Is happy digit! \n";
+            cout << "It's happy digit! \n";
         } else {
             cout << "Does not happy digit! \n";
         }
@@ -31,6 +34,12 @@ private:
     }
 
     bool is_happy_digit(const string &digit) {
-        return true;
+        auto v_front = utils::stov<vector<int>>(digit.substr(0, digit.size() / 2));
+        auto v_back = utils::stov<vector<int>>(digit.substr(digit.size() / 2));
+
+        int front_sum = accumulate(v_front.begin(), v_front.end(), 0);
+        int back_sum = accumulate(v_back.begin(), v_back.end(), 0);
+
+        return front_sum == back_sum;
     }
 };
