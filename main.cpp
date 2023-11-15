@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    class PeopleConversation task;
+    class EvenNumbersMultiplesOfFive task;
     task.run();
 
     return 0;

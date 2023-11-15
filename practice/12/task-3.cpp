@@ -37,10 +37,14 @@ using namespace std;
 // затем первый с третьим, третий с первым и т.д.
 
 enum people_type {
-    formalist, //
-    informal,  //
-    realist,   //
-    none,      //
+    formalist = 0, //
+    informal,      //
+    realist,       //
+    none,          //
+};
+
+constexpr std::string_view s_type[] = {
+    "formalist", "informal", "realist" //
 };
 
 struct Person {
@@ -55,20 +59,40 @@ struct Person {
     }
 
     void who_is() {
-        cout << "My name is " << name << ", I am " << age << " old and " << type;
+        cout << "My name is " << name << ", I am " << age << " old and " << s_type[type];
         cout << "\n";
     }
 
     void say_hello(const Person &other) {
-        cout << name << ": ";
-        cout << "Hello, " << other.name << "!";
+        cout << name << ": " << greeting(other) << ", " << other.name << "!";
         cout << "\n";
+    }
+
+    string greeting(const Person &other) {
+        if (type == people_type::formalist) {
+            return "Hello";
+        }
+
+        if (type == people_type::informal) {
+            return "Hi";
+        }
+
+        if (type == people_type::realist) {
+            if (other.age - 5 <= age) {
+                return "Hi";
+            }
+
+            return "Hello";
+        }
+
+        return {};
     }
 };
 
 class PeopleConversation {
 public:
     void run() {
+        srand(time(0));
         vector<Person> peoples;
         for (int i = 0; i < 5; i++) {
             peoples.push_back(create_person());
@@ -78,6 +102,16 @@ public:
         for (auto it = peoples.begin(); it != peoples.end(); ++it) {
             Person person = *it;
             person.who_is();
+        }
+
+        cout << "\nDialogues: \n";
+        for (size_t i = 0; i < peoples.size(); ++i) {
+            Person person1 = peoples[i];
+            for (size_t j = i + 1; j < peoples.size(); ++j) {
+                Person person2 = peoples[j];
+                person1.say_hello(person2);
+                person2.say_hello(person1);
+            }
         }
     }
 
@@ -90,7 +124,6 @@ private:
 
         int age = utils::rand_int(20, 40);
         int index = utils::rand_int(0, names.size() - 1);
-        cout << "index: " << index << " age: " << age << "\n";
 
         return Person(                              //
             names[index],                           //
