@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-    class NumberToAsterisk task;
+    class LettersWordInRandomOrder task;
     task.run();
 
     return 0;
