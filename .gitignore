@@ -35,10 +35,14 @@
 # Visual Studio Code
 .vscode
 
+# JetBrains
+.idea
+
 # MacOs
 .DS_Store
 
 #CMake
+.cmake
 CMakeLists.txt.user
 CMakeCache.txt
 CMakeFiles

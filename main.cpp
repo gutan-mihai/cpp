@@ -1,11 +1,10 @@
 #include "practice/include.h"
-#include <iostream>
 
 using namespace std;
 
 int main() {
-    class EvenNumbersMultiplesOfFive task;
+    class NumberToAsterisk task;
     task.run();
 
     return 0;
-};
+}

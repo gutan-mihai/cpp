@@ -33,9 +33,7 @@ int main() {
     string sandwich;
     cout << "Please enter letters: ";
     cin >> sandwich;
-    cout << (isIcecreamSandwich(sandwich) ? "Is sandwich with ice cream"
-                                          : "Not sandwich with ice cream")
-         << endl;
+    cout << (isIcecreamSandwich(sandwich) ? "Is sandwich with ice cream" : "Not sandwich with ice cream") << endl;
 
     return 0;
 }

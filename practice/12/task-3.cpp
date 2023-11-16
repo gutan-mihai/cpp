@@ -43,10 +43,6 @@ enum people_type {
     none,          //
 };
 
-constexpr std::string_view s_type[] = {
-    "formalist", "informal", "realist" //
-};
-
 struct Person {
     string name;
     int age;
@@ -59,6 +55,10 @@ struct Person {
     }
 
     void who_is() {
+        constexpr std::string_view s_type[] = {
+            "formalist", "informal", "realist" //
+        };
+
         cout << "My name is " << name << ", I am " << age << " old and " << s_type[type];
         cout << "\n";
     }
@@ -118,8 +118,7 @@ public:
 private:
     Person create_person() {
         vector<string> names{
-            "Alexander", "Andrei", "Ana",   "Irina",   "Natalia",
-            "Pavel",     "Roman",  "Sveta", "Serghei", "Tanea",
+            "Alexander", "Andrei", "Ana", "Irina", "Natalia", "Pavel", "Roman", "Sveta", "Serghei", "Tanea",
         };
 
         int age = utils::rand_int(20, 40);

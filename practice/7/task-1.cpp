@@ -12,8 +12,7 @@ class TimerClock {
 public:
     void run() {
         // seconds time = 5min + 17s; // 317 seconds
-        // cout << time.count() << endl; // не используйте count для внутренних
-        // преобразований!
+        // cout << time.count() << endl; // не используйте count для внутренних преобразований!
 
         display_clock();
     }

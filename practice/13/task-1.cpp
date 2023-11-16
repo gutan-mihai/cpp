@@ -9,5 +9,15 @@ using namespace std;
 
 class EvenNumbersMultiplesOfFive {
 public:
-    void run() {}
-}
+    void run() {
+        for (int i = 2; i <= 100; ++i) {
+            if (i % 2 != 0 || i % 5 != 0) {
+                continue;
+            }
+
+            cout << i << " ";
+        }
+
+        cout << "\n";
+    }
+};

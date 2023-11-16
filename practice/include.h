@@ -48,3 +48,13 @@
 #include "13/task-1.cpp"
 #include "13/task-2.cpp"
 #include "13/task-3.cpp"
+
+// Часть #14
+#include "14/task-1.cpp"
+#include "14/task-2.cpp"
+#include "14/task-3.cpp"
+
+// Часть #15
+#include "15/task-1.cpp"
+#include "15/task-2.cpp"
+#include "15/task-3.cpp"
