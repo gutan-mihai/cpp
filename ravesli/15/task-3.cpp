@@ -29,7 +29,7 @@ public:
         while (new_str != str) {
             new_str = {};
             cout << "[" << iterator_count << "] ";
-            random_shuffle(indexes.begin(), indexes.end());
+            // random_shuffle(indexes.begin(), indexes.end());
             for (auto it = indexes.begin(); it != indexes.end(); ++it) {
                 int index = *it;
                 cout << index;

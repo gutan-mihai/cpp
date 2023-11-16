@@ -1,11 +1,9 @@
 #include "leetcode/include.h"
 #include "ravesli/include.h"
+#include <vector>
 
 using namespace std;
 
 int main() {
-    class LettersWordInRandomOrder task;
-    task.run();
-
     return 0;
 }

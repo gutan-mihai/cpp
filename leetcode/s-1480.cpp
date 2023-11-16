@@ -10,7 +10,7 @@ using namespace std;
 // Given an array nums. We define a running sum of an array as runningSum[i] =
 // sum(nums[0]…nums[i]). Return the running sum of nums.
 
-class RunningSumOf1DArray {
+class Solution1480 {
 public:
     void run() {
         cout << "Enter the elements for the list (separated by space): ";
