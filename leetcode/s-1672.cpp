@@ -14,6 +14,6 @@ using namespace std;
 class Solution1672 {
 public:
     int maximumWealth(vector<vector<int>>& accounts) {
-        
+        return 0;
     }
 };

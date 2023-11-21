@@ -24,6 +24,7 @@ int main() {
     // ВАЖНО: за каждый new должен идти один корректный delete
     int* x2 = new int();
     delete x2;
+    
     int* arr = new int[100];
     delete[] arr;
     delete arr; // ERROR!

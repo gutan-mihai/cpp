@@ -11,17 +11,17 @@ using namespace std;
 // Return the linked list after insertion.
 // The greatest common divisor of two numbers is the largest positive integer that evenly divides both numbers.
 
-struct ListNode {
+struct ListNode2807 {
     int val;
-    ListNode *next;
-    ListNode() : val(0), next(nullptr) {}
-    ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
+    ListNode2807 *next;
+    ListNode2807() : val(0), next(nullptr) {}
+    ListNode2807(int x) : val(x), next(nullptr) {}
+    ListNode2807(int x, ListNode2807 *next) : val(x), next(next) {}
 };
 
 class Solution2807 {
 public:
-    ListNode *insertGreatestCommonDivisors(ListNode *head) {
+    ListNode2807 *insertGreatestCommonDivisors(ListNode2807 *head) {
         // Best solution:
         // ListNode *current = head;
         // while(current->next){
@@ -31,9 +31,9 @@ public:
         // }
         // return head;
 
-        ListNode *head_iterator = head;
+        ListNode2807 *head_iterator = head;
         while (head_iterator) {
-            ListNode *next = head_iterator->next;
+            ListNode2807 *next = head_iterator->next;
             if (next) {
                 int common_divisor{1};
                 vector<int> head_divisors = get_divisors(head_iterator->val);
@@ -46,7 +46,7 @@ public:
                     }
                 }
 
-                head_iterator->next = new ListNode(common_divisor, head_iterator->next);
+                head_iterator->next = new ListNode2807(common_divisor, head_iterator->next);
                 head_iterator = next;
             } else {
                 head_iterator = nullptr;

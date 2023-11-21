@@ -1,4 +1,9 @@
 // Problems
+#include "s-1.cpp"
+#include "s-13.cpp"
+#include "s-14.cpp"
+#include "s-20.cpp"
+#include "s-21.cpp"
 #include "s-771.cpp"
 #include "s-1108.cpp"
 #include "s-1282.cpp"
