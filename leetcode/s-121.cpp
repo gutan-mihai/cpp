@@ -11,12 +11,11 @@ class Solution121 {
 public:
     int maxProfit(std::vector<int> &prices) {
         int profit{0};
-        for (auto it = prices.begin(); it != prices.end(); ++it) {
-            auto max = max_element(it, prices.end());
-            int difference = (*max) - (*it);
-            if (profit < difference) {
-                profit = difference;
-            }
+        int price{0};
+        for (auto it = prices.rbegin(); it != prices.rend(); ++it) {
+            int current_price = *it;
+            price = std::max(price, current_price);
+            profit = std::max(profit, price - current_price);
         }
 
         return profit;
