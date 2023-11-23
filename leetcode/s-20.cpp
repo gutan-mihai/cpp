@@ -2,6 +2,7 @@
 
 #include <map>
 #include <string>
+#include <stack>
 
 // Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is
 // valid. An input string is valid if:
@@ -16,14 +17,28 @@ public:
             return false;
         }
 
+        stack<char> stack_brackets{};
         map<char, char> brackets{
-            {'(', ')'},
-            {'[', ']'},
-            {'{', '}'},
+            {')', '('},
+            {']', '['},
+            {'}', '{'},
         };
 
         int len = s.size();
         for (int i = 0; i < len; ++i) {
+            auto found = brackets.find(s[i]);
+            if (found != brackets.end()) {
+                stack_brackets.push(s[i]);
+            } else {
+                char bracket = stack_brackets.top();
+                if (bracket) {
+                    if (s[i] == brackets[bracket]) {
+                        stack_brackets.pop();
+                    } else {
+                        return false;
+                    }
+                }
+            }
         }
 
         return true;
