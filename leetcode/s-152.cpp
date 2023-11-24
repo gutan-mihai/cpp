@@ -11,19 +11,24 @@
 class Solution152 {
 public:
     int maxProduct(std::vector<int> &nums) {
-        int total_max{1};
-        int total_min{1};
-        int maximum = INT32_MIN;
-        int minimum = INT32_MAX;
+        int n = nums.size();
+        long long left_total{1};
+        long long maximum = INT32_MIN;
+        for (int i = 0; i < n; i++) {
+            left_total *= nums[i];
+            maximum = std::max(maximum, left_total);
+            if (left_total == 0) {
+                left_total = 1;
+            }
+        }
 
-        for (int num : nums) {
-            int m1 = total_min * num;
-            int m2 = total_min * num;
-            total_max = std::max(num, m1);
-            total_min = std::min(num, m2);
-
-            minimum = std::min(minimum, total_min);
-            maximum = std::max(maximum, std::max(total_max, m2));
+        long long right_total{1};
+        for (int i = n - 1; i >= 0; i--) {
+            right_total *= nums[i];
+            maximum = std::max(maximum, right_total);
+            if (right_total == 0) {
+                right_total = 1;
+            }
         }
 
         return maximum;

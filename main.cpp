@@ -16,10 +16,10 @@ using namespace std;
 int main() {
     Solution152 task;
     // vector<int> nums{2,3,-2,4}; // 6
-    vector<int> nums{2,-5,-2,-4,3}; // 24
+    // vector<int> nums{2,-5,-2,-4,3}; // 24
     // vector<int> nums{-3,0,1,-2}; // 1
     // vector<int> nums{-1,-2,-3,0}; // 6
-    // vector<int> nums{0, 10, 10, 10, 10, 10, 10, 10, 10, 10, -10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0}; // 1000000000
+    vector<int> nums{0, 10, 10, 10, 10, 10, 10, 10, 10, 10, -10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 0};
     cout << task.maxProduct(nums) << endl;
     return 0;
 }
