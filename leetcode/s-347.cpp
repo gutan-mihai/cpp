@@ -1,14 +1,12 @@
 #pragma once
 
 #include <map>
-#include <unordered_map>
 #include <queue>
+#include <unordered_map>
 #include <vector>
 
 // Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any
 // order.
-
-// Follow up: Your algorithm's time complexity must be better than O(n log n), where n is the array's size.
 
 class Solution347 {
 public:
@@ -39,7 +37,11 @@ public:
         }
 
         std::vector<std::pair<int, int>> v_sort{frq.begin(), frq.end()};
-        sort(v_sort.begin(), v_sort.end(), [](std::pair<int, int> l, std::pair<int, int> r) { return l.second > r.second; });
+        sort(                                                                                //
+            v_sort.begin(),                                                                  //
+            v_sort.end(),                                                                    //
+            [](std::pair<int, int> l, std::pair<int, int> r) { return l.second > r.second; } //
+        );
 
         std::vector<int> ans;
         for (int i = 0; i < k; ++i) {
