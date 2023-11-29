@@ -8,12 +8,23 @@
 class Solution42 {
 public:
     int trap(std::vector<int> &height) {
-        if (height.size() < 3) {
-            return 0;
+        int ans = 0;
+        int left = 0;
+        int right = height.size() - 1;
+        int max_left = height[left];
+        int max_right = height[right];
+        while (left < right) {
+            if (max_left <= max_right) {
+                left++;
+                max_left = std::max(max_left, height[left]);
+                ans += max_left - height[left];
+            } else {
+                right--;
+                max_right = std::max(max_right, height[right]);
+                ans += max_right - height[right];
+            }
         }
-
-        int water{0};
-
-        return water;
+        
+        return ans;
     }
 };

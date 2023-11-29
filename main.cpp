@@ -14,8 +14,11 @@ using namespace std;
 // 10 ^ 9 -> 0 0 1 1 -> 3
 
 int main() {
-    Solution167 task;
-    vector<int> nums{2,7,11,15};
-    task.twoSum(nums, 9);
+    Solution42 task;
+    // vector<int> nums{4,2,0,3,2,5}; // 9
+    // vector<int> nums{5, 4, 1, 2}; // 1
+    // vector<int> nums{0,1,2,2,1,0,1,3,2,1,2,1}; // 6
+    vector<int> nums{0,1,2,3,4,3,2,1,0}; // 0
+    cout << task.trap(nums) << endl;
     return 0;
 }
