@@ -2,8 +2,6 @@
 
 #include <vector>
 
-using namespace std;
-
 // You are given an integer array pref of size n. Find and return the array arr of size n that satisfies:
 // - pref[i] = arr[0] ^ arr[1] ^ ... ^ arr[i].
 // Note that ^ denotes the bitwise-xor operation. It can be proven that the answer is unique.
@@ -14,8 +12,8 @@ using namespace std;
 
 class Solution2433 {
 public:
-    vector<int> findArray(vector<int> &pref) {
-        vector<int> ans{pref.front()};
+    std::vector<int> findArray(std::vector<int> &pref) {
+        std::vector<int> ans{pref.front()};
         for (size_t i = 1; i < pref.size(); ++i) {
             ans.push_back(pref[i - 1] ^ pref[i]);
         }

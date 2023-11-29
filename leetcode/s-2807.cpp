@@ -4,8 +4,6 @@
 #include <numeric>   // для функции gcd()
 #include <vector>
 
-using namespace std;
-
 // Given the head of a linked list head, in which each node contains an integer value.
 // Between every pair of adjacent nodes, insert a new node with a value equal to the greatest common divisor of them.
 // Return the linked list after insertion.
@@ -36,13 +34,13 @@ public:
             ListNode2807 *next = head_iterator->next;
             if (next) {
                 int common_divisor{1};
-                vector<int> head_divisors = get_divisors(head_iterator->val);
-                vector<int> next_divisors = get_divisors(next->val);
+                std::vector<int> head_divisors = get_divisors(head_iterator->val);
+                std::vector<int> next_divisors = get_divisors(next->val);
                 int n = next_divisors.size();
                 for (size_t i = 0; i < n; ++i) {
-                    auto found = find(head_divisors.begin(), head_divisors.end(), next_divisors[i]);
+                    auto found = std::find(head_divisors.begin(), head_divisors.end(), next_divisors[i]);
                     if (found != head_divisors.end()) {
-                        common_divisor = max(common_divisor, *found);
+                        common_divisor = std::max(common_divisor, *found);
                     }
                 }
 
@@ -57,8 +55,8 @@ public:
     }
 
 private:
-    vector<int> get_divisors(int number) {
-        vector<int> divisors{1};
+    std::vector<int> get_divisors(int number) {
+        std::vector<int> divisors{1};
         for (size_t i = 2; i <= number; ++i) {
             if (number % i == 0) {
                 divisors.push_back(i);

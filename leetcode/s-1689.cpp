@@ -1,6 +1,6 @@
 #pragma once
 
-using namespace std;
+#include <string>
 
 // A decimal number is called deci-binary if each of its digits is either 0 or 1 without any leading zeros. For example,
 // 101 and 1100 are deci-binary, while 112 and 3001 are not.
@@ -23,7 +23,7 @@ using namespace std;
 
 class Solution1689 {
 public:
-    int minPartitions(string n) {
+    int minPartitions(std::string n) {
         char max = 0;
         for (char c : n) {
             if (c > max) {

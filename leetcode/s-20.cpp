@@ -17,8 +17,8 @@ public:
             return false;
         }
 
-        stack<char> stack_brackets{};
-        map<char, char> brackets{
+        std::stack<char> stack_brackets{};
+        std::map<char, char> brackets{
             {')', '('},
             {']', '['},
             {'}', '{'},

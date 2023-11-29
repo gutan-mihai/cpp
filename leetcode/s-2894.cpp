@@ -2,8 +2,6 @@
 
 #include <vector>
 
-using namespace std;
-
 // You are given positive integers n and m.
 // Define two integers, num1 and num2, as follows:
 // - num1: The sum of all integers in the range [1, n] that are not divisible by m.

@@ -2,8 +2,6 @@
 
 #include <vector>
 
-using namespace std;
-
 // Implement the class SubrectangleQueries which receives a rows x cols rectangle as a matrix of integers in the
 // constructor and supports two methods:
 
@@ -16,7 +14,7 @@ using namespace std;
 
 class SubrectangleQueries1476 {
 public:
-    SubrectangleQueries1476(vector<vector<int>>& rectangle) : matrix(rectangle) {}
+    SubrectangleQueries1476(std::vector<std::vector<int>>& rectangle) : matrix(rectangle) {}
 
     void updateSubrectangle(int row1, int col1, int row2, int col2, int newValue) {
         for (int i = row1; i <= row2; ++i) {
@@ -31,5 +29,5 @@ public:
     }
 
 private:
-    vector<vector<int>>& matrix;
+    std::vector<std::vector<int>>& matrix;
 };

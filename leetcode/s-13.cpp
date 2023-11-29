@@ -34,21 +34,19 @@ Given a roman numeral, convert it to an integer.
 class Solution13 {
 public:
     int romanToInt(string s) {
-        /*
-            // Best solution:
-            int temp{0};
-            int result{0};
-            for (int i = s.size() - 1; i >= 0; --i) {
-                int num = roman_to_int[s[i]];
-                if (num > temp) {
-                    result += num;
-                } else {
-                    result -= num;
-                }
+        // Best solution:
+        // int temp{0};
+        // int result{0};
+        // for (int i = s.size() - 1; i >= 0; --i) {
+        //     int num = roman_to_int[s[i]];
+        //     if (num > temp) {
+        //         result += num;
+        //     } else {
+        //         result -= num;
+        //     }
 
-                temp = num;
-            }
-        */
+        //     temp = num;
+        // }
 
         map<char, int> roman_to_int{
             {'I', 1}, {'V', 5}, {'X', 10}, {'L', 50}, {'C', 100}, {'D', 500}, {'M', 1000},

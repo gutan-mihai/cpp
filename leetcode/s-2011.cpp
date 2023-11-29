@@ -1,6 +1,7 @@
 #pragma once
 
-using namespace std;
+#include <vector>
+#include <string>
 
 // There is a programming language with only four operations and one variable X:
 // 1. ++X and X++ increments the value of the variable X by 1.
@@ -12,7 +13,7 @@ using namespace std;
 
 class Solution2011 {
 public:
-    int finalValueAfterOperations(vector<string> &operations) {
+    int finalValueAfterOperations(std::vector<std::string> &operations) {
         int x{0};
         int n = operations.size();
         for (size_t i = 0; i < n; ++i) {

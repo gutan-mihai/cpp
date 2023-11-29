@@ -1,7 +1,5 @@
 #pragma once
 
-using namespace std;
-
 // You are given two integers, num and t.
 // An integer x is called achievable if it can become equal to num after applying the following operation no more than t
 // times:

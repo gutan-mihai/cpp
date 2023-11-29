@@ -2,8 +2,6 @@
 
 #include <vector>
 
-using namespace std;
-
 // There are n employees in a company, numbered from 0 to n - 1. Each employee i has worked for hours[i] hours in the
 // company.
 
@@ -13,7 +11,7 @@ using namespace std;
 
 class Solution2798 {
 public:
-    int numberOfEmployeesWhoMetTarget(vector<int> &hours, int target) {
+    int numberOfEmployeesWhoMetTarget(std::vector<int> &hours, int target) {
         int employees{0};
         int n = hours.size();
         for (size_t i = 0; i < n; ++i) {

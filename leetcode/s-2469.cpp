@@ -1,6 +1,6 @@
 #pragma once
 
-using namespace std;
+#include <vector>
 
 // You are given a non-negative floating point number rounded to two decimal places celsius, that denotes the
 // temperature in Celsius.
@@ -13,8 +13,8 @@ using namespace std;
 
 class Solution2469 {
 public:
-    vector<double> convertTemperature(double celsius) {
-        return vector<double>{
+    std::vector<double> convertTemperature(double celsius) {
+        return std::vector<double>{
             celsius + 273.15,
             celsius * 1.80 + 32.00,
         };

@@ -3,8 +3,6 @@
 #include <algorithm>
 #include <vector>
 
-using namespace std;
-
 // There are n people that are split into some unknown number of groups. Each person is labeled with a unique ID from 0
 // to n - 1.
 
@@ -18,8 +16,8 @@ using namespace std;
 
 class Solution1282 {
 public:
-    vector<vector<int>> groupThePeople(vector<int>& groupSizes) {
-        vector<vector<int>> ans;
+    std::vector<std::vector<int>> groupThePeople(std::vector<int>& groupSizes) {
+        std::vector<std::vector<int>> ans;
         int n = groupSizes.size();
         for (int i = 0; i < n; ++i) {
             bool added = false;
@@ -28,7 +26,7 @@ public:
                     continue;
                 }
 
-                auto found = find(ans[j].begin(), ans[j].end(), -1);
+                auto found = std::find(ans[j].begin(), ans[j].end(), -1);
                 if (found != ans[j].end()) {
                     *found = i;
                     added = true;
@@ -36,7 +34,7 @@ public:
             }
 
             if (!added) {
-                vector<int> v_new{i};
+                std::vector<int> v_new{i};
                 for (int k = 0; k < groupSizes[i] - 1; k++) {
                     v_new.push_back(-1);
                 }
