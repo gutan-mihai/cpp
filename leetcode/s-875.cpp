@@ -15,6 +15,6 @@
 class Solution875 {
 public:
     int minEatingSpeed(std::vector<int>& piles, int h) {
-        
+        return 0;
     }
 };
