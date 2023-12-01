@@ -1,6 +1,7 @@
 #pragma once
 
 #include <vector>
+#include <cmath>
 
 // Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and
 // will come back in h hours.
@@ -14,7 +15,30 @@
 
 class Solution875 {
 public:
-    int minEatingSpeed(std::vector<int>& piles, int h) {
+    int minEatingSpeed(std::vector<int> &piles, int h) {
+        int low = 1;
+        int high = 0;
+        int n = piles.size();
+        for (int i = 0; i < n; i++) {
+            high = std::max(high, piles[i]);
+        }
         
+        int result = high;       
+        while (low <= high) {
+            int k = low + (high - low) / 2;
+            long int hours = 0;
+            for (int i = 0; i < n; i++) {
+                hours += std::ceil((double) piles[i] / k);
+            }
+            
+            if (hours <= h) {
+                result = std::min(result, k);
+                high = k - 1;
+            } else {
+                low = k + 1;
+            }
+        }
+        
+        return result;
     }
 };
