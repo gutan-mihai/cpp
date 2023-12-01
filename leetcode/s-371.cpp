@@ -4,9 +4,13 @@
 
 class Solution371 {
 public:
-    int getSum(int a, int b) {
-        int ans = 0;
-
-        return ans;
+    int add(int a, int b) {
+        while (b != 0) {
+            unsigned carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
+        }
+        
+        return a;
     }
 };

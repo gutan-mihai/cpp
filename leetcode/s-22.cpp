@@ -1,34 +1,31 @@
 #pragma once
 
-#include <stack>
 #include <string>
 #include <vector>
-
-// Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
-
-// only add open parenthesis, if open < n
-// only add closing parenthesis, if closed < open
-// valid if open == closed == n
 
 class Solution22 {
 public:
     std::vector<std::string> generateParenthesis(int n) {
-        std::vector<std::string> parentheses;
-        int open, close = 0;
-        while (true) {
-            if (open < n) {
-                // add open
-            }
+        std::vector<std::string> result;
+        fill_vector(n, 0, 0, "", result);
 
-            if (close < open) {
-                // add close
-            }
+        return result;
+    }
 
-            if (open == n && close == open) {
-                break;
-            }
+private:
+    void fill_vector(int n, int open, int close, std::string str, std::vector<std::string> &result) {
+        if (open == n && close == n) {
+            result.push_back(str);
+            
+            return;
         }
 
-        return parentheses;
+        if (open < n) {
+            fill_vector(n, open + 1, close, str + '(', result);
+        }
+        
+        if (open > close) {
+            fill_vector(n, open, close + 1, str + ')', result);
+        }
     }
 };

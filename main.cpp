@@ -15,8 +15,7 @@ using namespace std;
 // 10 ^ 9 -> 0 0 1 1 -> 3
 
 int main() {
-    Solution22 task;
-    task.generateParenthesis(3);
-    
+    Solution371 task;
+    cout << task.add(4, 7) << endl;
     return 0;
 }
